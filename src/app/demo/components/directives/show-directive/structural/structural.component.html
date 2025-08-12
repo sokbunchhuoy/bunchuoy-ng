@@ -1,0 +1,33 @@
+<p>Structural Detail!</p>
+<div *ngIf="condition">
+    Content to render when condition is true.
+</div>
+
+<div>
+    <h2>User List</h2>
+    <button (click)="checkBooks()">Check Book</button>
+    <div *ngIf="showBooks">
+        <ul>
+            <li *ngFor="let book of books ">
+                {{ book.title }} by {{ book.name }}
+            </li>
+        </ul>
+    </div>
+</div>
+<hr>
+<div class="card-container">
+    <h6>Customer</h6>
+    <ul>
+        <li *ngFor="let customer of customers let i = index">
+            {{i+1}} - {{ customer.name}} - {{customer.email}} -
+            <span [ngSwitch]="customer.status">
+                <span *ngSwitchCase="'A'" style="color: green;">Approve</span>
+                <span *ngSwitchCase="'B'" style="color: yellow;">Warning!</span>
+                <span *ngSwitchDefault="" style="color: red;">Reject!</span>
+            </span>
+
+        </li>
+
+    </ul>
+
+</div>

@@ -1,0 +1,12 @@
+<div>
+    <h2>Component A</h2>
+    <input [(ngModel)]="inputName" placeholder="Enter name" pInputText />
+    <div class="col-6">
+        <div class="formgroup-inline">
+            <div class="field-checkbox">
+                <button pButton (click)="sendInput()">Send name</button>
+            </div>
+        </div>
+    </div>
+    <p>Component A sends the input name using the sendInputName method of the shared service.</p>
+</div>

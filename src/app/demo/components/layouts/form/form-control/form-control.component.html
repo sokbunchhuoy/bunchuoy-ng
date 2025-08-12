@@ -1,0 +1,22 @@
+<div class="grid">
+    <div class="col-12 md:col-6">
+        <form (ngSubmit)="onSubmit()">
+            <div class="card p-fluid">
+                <h5>Form Control</h5>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">Name</label>
+                    <div class="col-12 md:col-10">
+                        <input id="name" type="text" [formControl]="code" pInputText />
+                        <div *ngIf="code.invalid && code.touched">
+                            Name is required and must be at least 3 characters long.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <button pButton type="submit" label="Submit"></button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

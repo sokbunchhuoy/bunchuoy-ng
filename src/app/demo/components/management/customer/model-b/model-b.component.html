@@ -1,0 +1,49 @@
+<div class="grid">
+    <div class="col-12 md:col-12">
+        <form [formGroup]="f">
+            <div class="card p-fluid">
+                <p-panel header="Customer">
+                    <div class="p-formgrid grid">
+                        <div>
+                            <h3>Supported Models</h3>
+                            <ul>
+                                <li *ngFor="let model of data.result.supportedModels">
+                                    <p-checkbox name="menu_item" [value]="model.id" [label]="model.code + model.name"
+                                        formControlName="modelId">
+
+                                    </p-checkbox>
+
+                                    <!-- Display child batch list -->
+                                    <ul *ngIf="model.batchList.length > 0" style="margin-left: 20px;">
+                                        <li *ngFor="let batch of model.batchList">
+                                            <p-checkbox name="menu_item" [value]="batch.modelId" [label]="batch.batch"
+                                                formControlName="batchList"></p-checkbox>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </p-panel>
+
+                <br />
+
+                <!-- Buttons -->
+                <div class="col-4">
+                    <div class="formgroup-inline">
+                        <div class="field-checkbox">
+                            <button pButton routerLink="/admin/kh/customer" icon="pi pi-arrow-left" pRipple label="Back"
+                                class="p-button-secondary"></button>
+                        </div>
+                        <div class="field-checkbox">
+                            <button pButton type="submit" label="Submit"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<p-toast position="top-right"></p-toast>

@@ -12,3 +12,50 @@ $gutter: 1rem; //for primeflex grid system
 @import "assets/demo/styles/flags/flags.css";
 @import "assets/demo/styles/badges.scss";
 @import "assets/demo/styles/code.scss";
+
+.required {
+    color: red;
+}
+
+.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.custom-icon {
+    color: #3352ff;
+    /* Change icon color */
+    margin-right: 10px;
+    /* Add space between icon and text */
+    font-size: 16px;
+    /* Adjust icon size */
+}
+
+.custom-text {
+    margin-right: 20px;
+    /* Space between text and the end */
+    font-weight: bold;
+    /* Bold text */
+    color: #333;
+    /* Text color */
+    font-size: 14px;
+    /* Text size */
+}

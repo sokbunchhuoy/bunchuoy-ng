@@ -1,0 +1,62 @@
+<div class="grid">
+    <div class="col-12 md:col-4">
+
+        <div class="card p-fluid">
+            <h1 [innerText]="property"></h1>
+            <h2>Example 1</h2>
+            <button [disabled]="isDisabled">I am disabled</button>
+        </div>
+
+        <div class="card p-fluid">
+            <h2>Event Binding</h2>
+            <label>Name: </label>
+            <div>
+                <input type="text" pInputText (input)="changeEvent($event)" />
+            </div>
+            <p>My name is {{name}}</p>
+        </div>
+
+        <div class="card p-fluid">
+            <h5>Template statements</h5>
+            <p>{{ message }}</p>
+            <div class="col-12 md:col-4">
+                <p-button (click)="handleClick()" style="width: 50px;">Click me!</p-button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-12 md:col-4">
+        <div class="card p-fluid">
+            <h4>Attribute binding</h4>
+            <img [src]="imageUrl" alt="Dynamic Image">
+            <div>
+                <h3>This is <a [attr.href]="linkUrl">Angular</a></h3>
+            </div>
+        </div>
+        <div class="card p-fluid">
+            <h2>Two-way binding</h2>
+            <label>Welcome: </label>
+            <div>
+                <input type="text" pInputText [(ngModel)]="hello" />
+            </div>
+            <p>Wellcom to {{hello}}</p>
+        </div>
+    </div>
+
+    <div class="col-12 md:col-4">
+        <div class="card p-fluid">
+
+            <div>
+                <h2>This is Style Binding</h2>
+
+                <span [style.color]="fontColor">Style binding</span>
+            </div>
+            <div>
+                <h2>This is Class Binding</h2>
+                <span [class.show]="classBinding">Class binding</span>
+            </div>
+        </div>
+    </div>
+
+</div>

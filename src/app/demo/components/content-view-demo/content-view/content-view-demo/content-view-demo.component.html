@@ -1,0 +1,33 @@
+<div class="grid">
+    <div class="col-12 md:col-10">
+        <h2>Content View Demo Component!</h2>
+        <app-show-content>
+
+            <div>
+                <div class="card p-fluid">
+                    <h1>ngAfterViewInit</h1>
+                    <div #getElement>{{ message }}</div>
+                </div>
+
+                <div class="card p-fluid">
+                    <h1>ngAfterViewCheckced</h1>
+                    <div>
+                        <p>{{ content }}</p>
+                        <button (click)="changeMessage()">Change Message</button>
+                    </div>
+                </div>
+                <div class="card p-fluid">
+                    <h1>ngAfterContentChecked</h1>
+                    <div>
+                        <h4>{{ dataToShow }}</h4>
+                    </div>
+                </div>
+
+                <div class="card p-fluid">
+                    <h1>ngAfterContentInit</h1>
+                    <p #contentParagraph>This paragraph's text color will be changed after content initialization.</p>
+                </div>
+            </div>
+        </app-show-content>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="grid">
+    <div class="col-12 md:col-6">
+        <div class="card p-fluid">
+            <h2> ngOnChange</h2>
+            <div>
+                <input type="text" pInputText [(ngModel)]="inputText"><br>
+
+                <app-component-a [inputValue]="inputText"></app-component-a>
+            </div>
+        </div>
+        <div class="card p-fluid">
+            <h1>ngAfterContentChecked</h1>
+            <div>
+                <h4>{{ dataToShow }}</h4>
+            </div>
+        </div>
+        <div class="card p-fluid">
+            <h1>ngAfterViewInit</h1>
+            <div #targetElement>{{ message }}</div>
+        </div>
+        <div class="card p-fluid">
+            <h1>ngAfterViewChecked</h1>
+            <div>
+                <p>{{ view }}</p>
+                <button (click)="changeMessage()">Change Message</button>
+            </div>
+        </div>
+    </div>
+</div>
