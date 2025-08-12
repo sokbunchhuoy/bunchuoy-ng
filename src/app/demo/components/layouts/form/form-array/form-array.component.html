@@ -1,0 +1,114 @@
+<div class="grid">
+    <div class="col-12 md:col-10">
+
+        <form [formGroup]="f" (ngSubmit)="onSubmit()">
+            <div class="card p-fluid">
+                <h5>Forms</h5>
+                <div class="p-formgrid grid">
+                    <div class="field col">
+                        <label for="code">Product Code <span class="required">*</span></label>
+                        <input id="code" pInputText formControlName="code" minlength="4" />
+                        <div *ngIf="f.get('code').invalid && f.get('code').touched" class="p-error mt-1">
+                            Product code must be at least 4 characters.
+                        </div>
+                    </div>
+
+                    <div class="field col">
+                        <label for="name">Product Name <span class="required">*</span></label>
+                        <input id="name" pInputText formControlName="productName" />
+
+                        <div *ngIf="f.get('productName').invalid && f.get('productName').touched" class="p-error mt-1">
+                            Product Name is required.
+                        </div>
+                    </div>
+
+                    <div class="field col">
+                        <label for="type">Product Type <span class="required">*</span></label>
+                        <p-dropdown [showClear]="true" [options]="type" optionLabel="type" optionValue="type"
+                            formControlName="productType" placeholder="--- Select Type ---">
+                        </p-dropdown>
+                        <div *ngIf="f.get('productType').invalid && f.get('productType').touched" class="p-error mt-1">
+                            Product Type is required.
+                        </div>
+                    </div>
+                    <div class="field col">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input id="email" pInputText formControlName="email" />
+                        <div *ngIf="f.get('email').invalid && f.get('email').touched" class="p-error mt-1">
+                            <ng-container *ngIf="f.get('email').errors?.required">Email is required</ng-container>
+                            <ng-container *ngIf="f.get('email').errors?.email">Please enter a valid email</ng-container>
+                        </div>
+                    </div>
+                </div>
+                <p-panel header="Address Details">
+                    <div class="p-formgrid grid" formGroupName="address">
+                        <div class="field col">
+                            <label for="streetNo">Street No <span class="required">*</span></label>
+                            <input id="streetNo" pInputText formControlName="streetNo" />
+                            <div *ngIf="f.get('address.streetNo').invalid && f.get('address.streetNo').touched"
+                                class="p-error mt-1">
+                                Street No is required.
+                            </div>
+                        </div>
+
+                        <div class="field col">
+                            <label for="homeNo">Home No <span class="required">*</span></label>
+                            <input id="homeNo" pInputText formControlName="homeNo" />
+                            <div *ngIf="f.get('address.homeNo').invalid && f.get('address.homeNo').touched"
+                                class="p-error mt-1">
+                                Home No is required.
+                            </div>
+                        </div>
+
+                    </div>
+                </p-panel>
+                <br>
+                <p-panel header="product Fee">
+                    <div class="grid" formArrayName="productFees">
+                        <div class="col-12 md:col-2">
+                            <!-- <label>Fee</label> -->
+                        </div>
+                        <div class="col-12 md:col-10">
+                            <div class="grid">
+                                <div class="col-12 md:col-3"><label>Qty :</label></div>
+                                <div class="col-12 md:col-3"> <label>Fee Amount : </label> </div>
+                                <div class="col-12 md:col-3"> <label>Branch Code :</label> </div>
+                            </div>
+                            <div *ngFor="let nt of f.controls['productFees']['controls'];  let i = index"
+                                [formGroupName]="i">
+                                <div class="grid">
+                                    <div class="col-12 md:col-3">
+                                        <input id="feeAmount" placeholder="qty" pInputText formControlName="qty" />
+                                    </div>
+                                    <div class="col-12 md:col-3">
+                                        <input id="flagType" placeholder="amount" pInputText
+                                            formControlName="feeAmount" />
+                                    </div>
+                                    <div class="col-12 md:col-3">
+                                        <input type="text" pInputText formControlName="branchCode"
+                                            placeholder="branch code" />
+
+                                    </div>
+                                    <div class="col-12 md:col-2">
+                                        <div class="field">
+                                            <button pButton pRipple class="p-button-raised p-button-warning"
+                                                (click)="deleteFee(i)" type="button" icon="pi pi-minus"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button pButton pRipple class="p-button-raised p-button-success" icon="pi pi-plus"
+                                type="button" (click)="addFee()"></button>
+                        </div>
+                    </div>
+                </p-panel>
+                <br>
+
+
+                <div class="col-2">
+                    <button pButton type="submit" label="Submit" [disabled]="f.invalid"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

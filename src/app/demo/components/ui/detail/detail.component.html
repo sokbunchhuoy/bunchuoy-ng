@@ -1,0 +1,17 @@
+<div class="grid">
+    <div class="col-12 md:col-6">
+        <div class="card p-fluid">
+            <h2>User Details</h2>
+            <div>
+                <app-example [inputValue]="data"></app-example>
+                <button (click)="changeInputValue()">Change Input Value</button>
+            </div>
+        </div>
+        <div class="card p-fluid">
+            <h2> ngOnInit</h2>
+            <div>
+                <p>Name: {{ user.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>

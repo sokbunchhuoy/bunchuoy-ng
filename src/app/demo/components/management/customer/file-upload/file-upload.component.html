@@ -1,0 +1,39 @@
+<div class="grid">
+    <div class="col-12 md:col-4">
+
+        <div class="card p-fluid">
+            <h5>Upload & Download</h5>
+
+            <!-- Customer Code -->
+            <div class="p-formgrid grid">
+                <div class="field col">
+                    <h2>Image Upload</h2>
+                    <input type="file" pInputText (change)="onImageSelected($event)" />
+                    <p-progressBar [value]="uploadProgress" [style]="{'margin-top':'10px'}"></p-progressBar>
+                    <h2>JSON Download</h2>
+                    <button pButton icon="pi pi-cloud-download" pRipple label="Download" class="p-button-primary"
+                        (click)="downloadJsonData()"></button>
+                    <p-progressBar [value]="downloadProgress" [style]="{'margin-top':'10px'}"></p-progressBar>
+
+                </div>
+
+
+
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-4">
+                <div class="formgroup-inline">
+                    <div class="field-checkbox">
+                        <button pButton routerLink="/admin/kh/customer" icon="pi pi-arrow-left" pRipple label="Back"
+                            class="p-button-secondary"></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Toast Notification -->
+<p-toast position="top-right"></p-toast>

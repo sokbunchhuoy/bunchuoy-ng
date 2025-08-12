@@ -1,0 +1,51 @@
+<div class="grid">
+    <div class="col-12 md:col-10">
+        <form>
+            <div class="card p-fluid">
+                <h5>Customer Form</h5>
+
+                <!-- Customer Code -->
+                <div class="p-formgrid grid">
+                    <div class="field col">
+                        <label for="code">Customer Code <span class="required">*</span></label>
+                        <input id="code" pInputText formControlName="code" minlength="4" />
+
+                    </div>
+
+                    <!-- Customer Name -->
+                    <div class="field col">
+                        <label for="name">Customer Name <span class="required">*</span></label>
+                        <input id="name" pInputText formControlName="name" />
+
+                    </div>
+
+                    <!-- Position -->
+                    <div class="field col">
+                        <label for="type">Position <span class="required">*</span></label>
+                        <input id="name" pInputText formControlName="position" />
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="field col">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input id="email" pInputText formControlName="email" />
+
+                    </div>
+                </div>
+
+
+                <br />
+
+                <!-- Submit Button -->
+                <div class="col-4">
+                    <div class="formgroup-inline">
+                        <div class="field-checkbox">
+                            <button pButton type="submit" label="Submit"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="grid">
+    <div class="col-12 md:col-6">
+        <div class="card p-fluid">
+            <h2> Date Pipe Detail</h2>
+            <div>
+                <p>{{ todaydate | date:'dd-MM-yyyy' }}</p>
+                <b>{{ todaydate | date:'hh:mm:ss aa'}}</b>
+            </div>
+        </div>
+
+        <div class="card p-fluid">
+            <h2>Currency Pipe </h2>
+            <p>Price: {{ price }}</p>
+            <p>Formatted Price (Default Currency): {{ price | currency }}</p>
+            <p>Formatted Price (Custom Currency - USD): {{ price | currency:'USD' }}</p>
+        </div>
+
+        <div class="card p-fluid">
+            <h2>JSON Pipe Example</h2>
+
+            <p>Object as JSON: {{ myObject | json }}</p>
+
+            <p>Array as JSON: {{ myArray | json }}</p>
+        </div>
+        <div class="card p-fluid">
+            <h2>Async Pipe </h2>
+
+            <h2>Using AsyncPipe with Observable</h2>
+            <p>{{ myObservable$ | async }}</p>
+            <h2>Using AsyncPipe with Promise</h2>
+            <p>{{ myPromise$ | async }}</p>
+        </div>
+
+        <div class="card p-fluid">
+            <h2>Percent Pipe Example</h2>
+            <p>Original Number: {{ myNumber }}</p>
+            <p>Percentage Value: {{ myNumber | percent }}</p>
+        </div>
+
+        <div class="card p-fluid">
+
+            <h2>Decimal Pipe</h2>
+            <p>Number with Decimal: {{ numberWithDecimal }}</p>
+            <p>Formatted Number (Default): {{ numberWithDecimal | number }}</p>
+            <p>Formatted Number (With Decimal Places): {{ numberWithDecimal | number:'1.2-4' }}</p>
+
+        </div>
+
+        <div class="card p-fluid">
+            <h2>LowerCase Pipe</h2>
+            <p>Original String: {{ myString }}</p>
+            <p>Lowercased String: {{ myString | lowercase }}</p>
+        </div>
+        <div class="card p-fluid">
+            <h2>UpperCasePipe Pipe</h2>
+            <p>Original String: {{ UpperCaseString }}</p>
+            <p>Uppercased String: {{ UpperCaseString | uppercase }}</p>
+        </div>
+        <div>
+            <p>{{ gl| truncateString:20}}</p>
+        </div>
+    </div>
+</div>

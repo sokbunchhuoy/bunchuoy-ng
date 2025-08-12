@@ -1,0 +1,361 @@
+{
+  "model": [
+    {
+      "name": "bunchhuoy",
+      "price": 33,
+      "qty": 33,
+      "branch": "Drink",
+      "id": "1"
+    }
+  ],
+  "products": [
+    {
+      "name": "bunchhuoy",
+      "price": 33,
+      "qty": 33,
+      "branch": "Drink",
+      "id": "1"
+    },
+    {
+      "id": "571f",
+      "name": "Tan Chhuoy",
+      "price": 0,
+      "qty": 7,
+      "branch": "7"
+    },
+    {
+      "name": "Tan Chhuoy",
+      "price": 333,
+      "qty": 3,
+      "branch": "tttt",
+      "id": "aace"
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "code": "3646644",
+      "name": "Sok Bunchhuoy",
+      "position": "Sok Bunchhuoy",
+      "email": "sokbunchhuoy99@gmail.com",
+      "branchName": [
+        {
+          "branch": "Frontend",
+          "type": "Coding",
+          "branchCode": "1235",
+          "category": "test"
+        }
+      ],
+      "address": {
+        "streetNo": "Kampong Speu",
+        "homeNo": "boreykamkor"
+      }
+    },
+    {
+      "id": "2",
+      "code": "bunchhuoy",
+      "name": "Sok Bunchhuoy",
+      "position": "Sok Bunchhuoy",
+      "email": "sokbunchhuoy99@gmail.com",
+      "branchName": [
+        {
+          "branch": "Frontend",
+          "type": "Coding",
+          "branchCode": "1235",
+          "category": "test"
+        }
+      ],
+      "address": {
+        "streetNo": "Kampong Speu",
+        "homeNo": "boreykamkor"
+      }
+    },
+    {
+      "id": "3",
+      "code": "ggg",
+      "name": "ggg",
+      "position": "gggg",
+      "email": null,
+      "branchName": [
+        {
+          "branch": null,
+          "type": null,
+          "branchCode": null,
+          "category": null
+        }
+      ],
+      "address": {
+        "streetNo": null,
+        "homeNo": null
+      },
+      "major": null,
+      "minor": null
+    },
+    {
+      "id": null,
+      "code": "1F",
+      "name": "rrr",
+      "position": "r",
+      "email": "r",
+      "branchName": [
+        {
+          "branch": null,
+          "type": null,
+          "branchCode": null,
+          "category": null
+        },
+        {
+          "branch": null,
+          "type": null,
+          "branchCode": null,
+          "category": null
+        }
+      ],
+      "address": {
+        "streetNo": null,
+        "homeNo": null
+      },
+      "major": 3,
+      "minor": 1
+    }
+  ],
+  "users": [
+    {
+      "name": "bunchhuoy",
+      "email": "info@gmail.com",
+      "password": "admin@168",
+      "id": "1",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+    },
+    {
+      "name": "bunchhuoy",
+      "email": "test@gmail.com",
+      "password": "admin@192",
+      "id": "2",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ8"
+    },
+    {
+      "email": "info@gmail.com",
+      "password": "admin@168",
+      "id": "3"
+    },
+    {
+      "email": "info@gmail.com",
+      "password": "admin@168",
+      "id": "4"
+    },
+    {
+      "email": "info@gmail.com",
+      "password": "admin@168",
+      "id": "5"
+    },
+    {
+      "email": "info@gmail.com",
+      "password": "admin@168",
+      "id": "6"
+    },
+    {
+      "email": "info@gmail.com",
+      "password": "admin@168",
+      "id": "7"
+    }
+  ],
+  "gl": [
+    {
+      "id": "12",
+      "glGroupType": "DEPOSIT",
+      "glGroupCode": "A-001",
+      "glGroupName": "Car Deposit",
+      "accGlProducts": [
+        {
+          "id": 99,
+          "glCode": "16636537",
+          "glName": "Bus car 007",
+          "accountElement": "BALANCE",
+          "status": true,
+          "version": 0
+        }
+      ],
+      "status": true,
+      "version": 0
+    },
+    {
+      "id": "14",
+      "glGroupType": "LOAN",
+      "glGroupCode": "001",
+      "glGroupName": "ID Car",
+      "accGlProducts": [
+        {
+          "id": 102,
+          "glCode": "13110003",
+          "glName": "Housing Loan",
+          "accountElement": "PRINCIPAL",
+          "status": true,
+          "version": 0
+        },
+        {
+          "id": 103,
+          "glCode": "14110003",
+          "glName": "Stock Housing Loan",
+          "accountElement": "WHT",
+          "status": true,
+          "version": 0
+        },
+        {
+          "id": 104,
+          "glCode": "28970001",
+          "glName": "Interest Pawn Receivable",
+          "accountElement": "INTEREST_EXPENSE",
+          "status": true,
+          "version": 0
+        },
+        {
+          "id": 105,
+          "glCode": "37210001",
+          "glName": "Unearned Pawn Interest Revenue",
+          "accountElement": "AIR",
+          "status": true,
+          "version": 0
+        },
+        {
+          "id": 106,
+          "glCode": "51410003",
+          "glName": "Inter. Housing Loan",
+          "accountElement": "INTEREST_INCOME",
+          "status": true,
+          "version": 0
+        },
+        {
+          "id": 107,
+          "glCode": "41410003",
+          "glName": "ID Car",
+          "accountElement": "SUSPENSE_INTEREST",
+          "status": true,
+          "version": 0
+        },
+        {
+          "id": 108,
+          "glCode": "51410001",
+          "glName": "Inter. ID Car",
+          "accountElement": "PENALTY_OVERDUE",
+          "status": true,
+          "version": 0
+        },
+        {
+          "id": 109,
+          "glCode": "14110009",
+          "glName": "Stock Laptop Computer",
+          "accountElement": "PROVISION",
+          "status": true,
+          "version": 0
+        },
+        {
+          "id": 110,
+          "glCode": "51410009",
+          "glName": "Inter. Laptop Computer",
+          "accountElement": "PROCESSING_FEE",
+          "status": true,
+          "version": 0
+        }
+      ],
+      "status": true,
+      "version": 0
+    },
+    {
+      "id": "15",
+      "glGroupType": "DEPOSIT",
+      "glGroupCode": "003",
+      "glGroupName": "Laptop Computer",
+      "accGlProducts": [
+        {
+          "id": 111,
+          "glCode": "51410009",
+          "glName": "Laptop Computer",
+          "accountElement": "BALANCE",
+          "status": true,
+          "version": 0
+        }
+      ],
+      "status": true,
+      "version": 0
+    }
+  ],
+  "uploads": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "2"
+    }
+  ],
+  "images": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "3"
+    },
+    {
+      "id": "4"
+    },
+    {
+      "id": "5"
+    },
+    {
+      "id": "6"
+    },
+    {
+      "id": "7"
+    },
+    {
+      "id": "8"
+    },
+    {
+      "id": "9"
+    },
+    {
+      "id": "10"
+    },
+    {
+      "id": "11"
+    },
+    {
+      "id": "12"
+    },
+    {
+      "id": "13"
+    },
+    {
+      "id": "14"
+    },
+    {
+      "id": "15"
+    },
+    {
+      "id": "16"
+    },
+    {
+      "id": "17"
+    },
+    {
+      "id": "18"
+    },
+    {
+      "id": "19"
+    },
+    {
+      "id": "20"
+    },
+    {
+      "id": "21"
+    }
+  ],
+  "data": {
+    "id": 1,
+    "name": "Sample Data",
+    "description": "This is just a sample JSON response."
+  }
+}

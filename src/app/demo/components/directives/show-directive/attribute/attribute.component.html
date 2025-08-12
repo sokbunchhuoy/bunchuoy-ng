@@ -1,0 +1,26 @@
+<p>attribute works!</p>
+
+<div>
+    <p [ngClass]="condition ? 'show': 'isShow'">Hello Angular and TypeScipt</p>
+</div><br>
+
+<div [ngClass]="'first'">
+    <p [ngClass]="'second'">ngClass as a String</p>
+</div>
+<hr />
+
+<div class="col-12 md:col-5">
+    <p-button (click)="toggleColor()" style="width: 70px;">Click NgStyle</p-button>
+</div>
+<div [ngStyle]="{'color': isRed ? 'red' : 'blue'}">
+    This div has dynamic styles.
+</div>
+<div>
+    <p [ngStyle]="{'background-color':'grey','color':'back'}">This a book</p>
+</div>
+<hr>
+
+<div>
+    <input type="text" pInputText [(ngModel)]="Fname" />
+</div>
+<p>Hi. {{Fname}}</p>

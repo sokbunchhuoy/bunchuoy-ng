@@ -1,0 +1,21 @@
+<div class="grid">
+    <div class="col-12 md:col-6">
+
+        <div class="card p-fluid">
+            <h5>app-components works!</h5>
+            <app-alert-box>
+                <div alert-box>
+                    <p>This is an alert message!</p>
+                </div>
+                <div>
+                    <p>This is the content</p>
+                </div>
+            </app-alert-box>
+        </div>
+        <button (click)="getData()">Get Data</button>
+
+        <div *ngFor="let code of voucherCodes; let i = index">
+            <input type="text" [value]="code" readonly>
+        </div>
+    </div>
+</div>

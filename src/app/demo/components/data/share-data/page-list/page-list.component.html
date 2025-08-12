@@ -1,0 +1,19 @@
+<div class="grid">
+    <div class="col-12 md:col-4">
+        <div class="card p-fluid">
+            <app-data-list></app-data-list>
+        </div>
+    </div>
+    <div class="col-12 md:col-4">
+        <div class="card p-fluid">
+            <app-data-get></app-data-get>
+        </div>
+    </div>
+    <div class="col-12 md:col-4">
+        <div class="card p-fluid">
+            <button (click)="updateData()">Change Data</button>
+            <app-component [data]="parentData"></app-component>
+
+        </div>
+    </div>
+</div>

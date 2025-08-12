@@ -1,0 +1,124 @@
+<div class="grid">
+    <div class="col-12 md:col-10">
+        <form [formGroup]="f" (ngSubmit)="onSubmit()">
+            <div class="card p-fluid">
+                <h5>Customer Form</h5>
+
+                <!-- Customer Code -->
+                <div class="p-formgrid grid">
+
+
+                    <div class="field col">
+                        <label for="code">Customer Code <span class="required">*</span></label>
+                        <input id="code" pInputText formControlName="code" />
+
+                    </div>
+
+                    <!-- Customer Name -->
+                    <div class="field col">
+                        <label for="name">Customer Name</label>
+                        <input id="name" pInputText formControlName="name" />
+
+                    </div>
+
+                    <!-- Position -->
+                    <div class="field col">
+                        <label for="type">Position </label>
+                        <input id="name" pInputText formControlName="position" />
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="field col">
+                        <label for="email">Email</label>
+                        <input id="email" pInputText formControlName="email" />
+
+                    </div>
+                </div>
+
+                <!-- Address Details -->
+                <p-panel header="Address Group">
+                    <div class="p-formgrid grid" formGroupName="address">
+                        <div class="field col">
+                            <label for="streetNo">Street No <span class="required">*</span></label>
+                            <input id="streetNo" pInputText formControlName="streetNo" />
+                            <div *ngIf="f.get('address.streetNo').invalid && f.get('address.streetNo').touched"
+                                class="p-error mt-1">
+                                Street No is required.
+                            </div>
+                        </div>
+
+                        <div class="field col">
+                            <label for="homeNo">Home No <span class="required">*</span></label>
+                            <input id="homeNo" pInputText formControlName="homeNo" />
+                            <div *ngIf="f.get('address.homeNo').invalid && f.get('address.homeNo').touched"
+                                class="p-error mt-1">
+                                Home No is required.
+                            </div>
+                        </div>
+                    </div>
+                </p-panel>
+
+                <br />
+
+                <!-- Branch -->
+                <p-panel header="Branch">
+
+                    <div class="grid" formArrayName="branchName">
+
+                        <div class="col-12 md:col-12">
+                            <div class="grid">
+                                <div class="col-12 md:col-2"><label>Branch :</label></div>
+                                <div class="col-12 md:col-2"><label>Type :</label></div>
+                                <div class="col-12 md:col-2"><label>Branch Code :</label></div>
+                                <div class="col-12 md:col-2"><label>Category :</label></div>
+                            </div>
+
+                            <div *ngFor="let branchGroup of f.get('branchName')['controls']; let i = index"
+                                [formGroupName]="i">
+                                <div class="grid">
+
+                                    <div *ngFor="let control of branchGroup | formControls" class="col-12 md:col-2">
+
+                                        <input type="text" pInputText [formControlName]="control.controlName"
+                                            [id]="control.controlName" />
+                                    </div>
+                                    <div class="col-12 md:col-2">
+                                        <div class="field">
+                                            <button pButton pRipple class="p-button-raised p-button-warning"
+                                                (click)="deleteBranch(i)" type="button" icon="pi pi-minus"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button pButton pRipple class="p-button-raised p-button-success" icon="pi pi-plus"
+                                type="button" (click)="addBranch()"></button>
+                        </div>
+                    </div>
+
+
+
+
+                </p-panel>
+
+                <br />
+
+                <!-- Submit Button -->
+                <div class="col-4">
+                    <div class="formgroup-inline">
+                        <div class="field-checkbox">
+                            <button pButton routerLink="/admin/kh/customer" icon="pi pi-arrow-left" pRipple label="Back"
+                                class="p-button-secondary"></button>
+                        </div>
+                        <div class="field-checkbox">
+
+                            <button pButton type="submit" label="Submit" [disabled]="f.invalid"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Toast Notification -->
+<p-toast position="top-right"></p-toast>

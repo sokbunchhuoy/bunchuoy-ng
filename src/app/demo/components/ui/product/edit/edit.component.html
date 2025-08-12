@@ -1,0 +1,39 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <form [formGroup]="form" (ngSubmit)="editData()">
+                <div class="p-fluid p-formgrid grid">
+                    <div class="field col-12 md:col-10">
+                        <h5 class="align-content-end">Product</h5>
+                    </div>
+                    <div class="field col-12 md:col-1">
+                        <button pButton routerLink="/admin/ui/product" pRipple label="Back"
+                            class="p-button-secondary"></button>
+                    </div>
+                    <div class="field col-12 md:col-1">
+                        <button pButton type="submit" pRipple label="add" class="p-button-primary"></button>
+                    </div>
+                </div>
+                <div class="p-fluid p-formgrid grid">
+                    <div class="field col-12 md:col-6">
+                        <label htmlFor="firstname2">Name</label>
+                        <input pInputText formControlName="name" id="firstname2" type="text" />
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label htmlFor="lastname2">Price</label>
+                        <input pInputText formControlName="price" id="lastname2" type="number" />
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label htmlFor="city">Quantity</label>
+                        <input pInputText formControlName="qty" id="city" type="number" />
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label htmlFor="zip">Category</label>
+                        <input pInputText id="zip" formControlName="branch" type="text" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<p-toast position="top-left"></p-toast>
